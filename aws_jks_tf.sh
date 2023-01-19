@@ -12,7 +12,7 @@ echo "wait for minute..git pull"
 git stash
 git pull
 echo "cd terraform"
-/root/github/team_prj_sub/prod-web-autoscale
+cd /root/github/team_prj_sub/prod-web-autoscale
 echo "terraform plan"
 terraform plan
 echo "terraform apply"

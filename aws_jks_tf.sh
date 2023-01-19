@@ -5,17 +5,12 @@ echo "##################################################"
 echo " "
 echo "This script pid : $$"
 echo " "
-cd /root/github/django_blog
+cd /root/github/team_prj_sub
 dirpath=${PWD}
 echo "change directory :  $dirpath"
+echo "start down"
+echo "wait for minute..."
+echo "up & build"
 git stash
 git pull
-echo "start 3svr db, web, nginx"
-echo "wait for minute..."
-docker-compose start db
-echo "started 1"
-docker-compose start web
-echo "started 2"
-docker-compose start nginx
-echo "started 3"
 echo "### complete ###"

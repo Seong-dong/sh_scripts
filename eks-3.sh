@@ -13,11 +13,13 @@ echo "set dirver.yaml"
 cd /root/team_prj_k8s/environment/efs
 echo "kubectl apply driver"
 kubectl apply -f driver.yaml
-sleep 10s
+sleep 30s
 echo "storageclasee id set"
 vim storageclass.yaml
 kubectl apply -f storageclass.yaml
 sleep 10s
 echo "pvc deply"
 kubectl apply -f pvc.yaml
-
+cd /root/team_prj_k8s/database
+kubectl apply -f svc.yml
+kubectl apply -f mariadb.yml

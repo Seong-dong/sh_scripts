@@ -15,6 +15,7 @@ echo "kubectl apply driver"
 kubectl apply -f driver.yaml
 sleep 10s
 echo "storageclasee id set"
+vim storageclass.yaml
 kubectl apply -f storageclass.yaml
 sleep 10s
 echo "pvc deply"

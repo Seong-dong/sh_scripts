@@ -13,5 +13,7 @@ echo "service Account add by Cloudformation"
 eksctl create iamserviceaccount --cluster $CLUSTER_NAME --namespace kube-system --name aws-load-balancer-controller --attach-policy-arn arn:aws:iam::$ACCOUNT_ID:policy/AWSLoadBalancerControllerIAMPolicy --override-existing-serviceaccounts --approve
 echo "kubectl apply cert-manager"
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
+echo "sleep 90 second"
+sleep 90
 echo "kubectl apply controller"
 kubectl apply -f v2_4_4_full_22shop.yaml

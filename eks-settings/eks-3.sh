@@ -23,3 +23,10 @@ kubectl apply -f pvc.yaml
 cd /root/team_prj_k8s/database
 kubectl apply -f svc.yml
 kubectl apply -f mariadb.yml
+echo "default svc, ingress, app launch"
+cd /root/team_prj_k8s/base
+kubectl apply -f service.yml
+kubectl apply -f ingress.yml
+sleep 10s
+kubectl apply -f eks_deployment.yml
+watch kubectl get node,ingress,svc,pvc,storageclass,deploy,replicaset,pod -o wide
